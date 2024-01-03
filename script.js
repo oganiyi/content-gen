@@ -1,3 +1,5 @@
+import API_KEYS from './config.js';
+
 let myform = document.forms['myform'];
 
 let userText = myform['userText'];
@@ -6,8 +8,8 @@ let text_result = document.getElementById('text-result');
 let img1 = document.getElementById('img1');
 let img2 = document.getElementById('img2');
 
-const GPT_API_KEY = "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";
-const DIF_API_KEY = "1xtZby4qyM0JiilgzCIfb4yWWHA1alpZFfxiuDqmEc2N47mGyndcXDDIgbfL";
+const GPT_API_KEY = API_KEYS.gpt;
+const DIF_API_KEY = API_KEYS.diffusion;
 
 const getChatResponse = async (query_gpt) => {
     const API_URL = "https://api.openai.com/v1/completions";
