@@ -34,7 +34,7 @@ const getChatResponse = async (query_gpt) => {
         console.log(response);
         text_result.innerHTML = response.choices[0].text;
     } catch {
-
+        console.log("Error processing request");
     }
 }
 
@@ -76,7 +76,7 @@ const getImageResponse = async (query_dif) => {
         img2.src = response.output[1];
         document.getElementById('loader').classList.add('d-none');
     } catch {
-
+        console.log("Error processing request");
     }
 }
 
